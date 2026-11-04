@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
 </head>
 <body>
-    <h1>Teste 01 aopa</h1>
+
+    <div id="minhaDiv" class="header">
+        <h2>Primeiro to-do list</h2>
+        <input type="text" id="meuInput" placeholder="Adicionar nova tarefa">
+        <span onclick="newElement()" class="addBtn">Adicionar</span>
+    </div>
+
+    <ul id="minhaUL">
+        <li>Acordar 5:00 para treinar</li>
+        <li>Leitura depois do treino</li>
+        <li>Estudar no trabalho se tiver tempo</li>
+        <li>Ler no horário de almoço</li>
+        <li>Cardio na esteira</li>
+        <li>Ler antes de dormir</li>
+    </ul>
+
 </body>
 </html>
