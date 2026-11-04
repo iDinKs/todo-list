@@ -1,75 +1,36 @@
-/* Include the padding and border in an element's total width and height */
+/* Inclua o espaçamento interno (padding) e a borda na largura e altura totais de um elemento. */
 * {
   box-sizing: border-box;
 }
 
-/* Remove margins and padding from the list */
+/* Remova as margens e o espaçamento interno da lista */
 ul {
-  margin: 0;
+  margin: 5;
   padding: 0;
 }
 
-/* Style the list items */
+/* Aplique estilo aos itens da lista */
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 40px;
-  background: #eee;
+  padding: 15px 10px 15px 30px;
+  background: #ffffff;
   font-size: 18px;
-  transition: 0.2s;
+  transition: 0.1s;
 
-  /* make the list items unselectable */
+  /* tornar os itens da lista não selecionáveis */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-  background: #f9f9f9;
-}
-
-/* Darker background-color on hover */
+/* Cor de fundo mais escura ao passar o cursor */
 ul li:hover {
-  background: #ddd;
+  background: #ddd1d1;
 }
 
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
-}
-
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: #ff0505;
-  color: white;
-}
-
-/* Style the header */
+/* Aplique estilo ao cabeçalho */
 .header {
   background-color: #219199;
   padding: 30px 40px;
@@ -77,14 +38,14 @@ ul li.checked::before {
   text-align: center;
 }
 
-/* Clear floats after the header */
+/* Limpa flutuações após o cabeçalho */
 .header:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Style the input */
+/* Aplique estilo à entrada */
 input {
   margin: 0;
   border: none;
@@ -109,6 +70,12 @@ input {
   border-radius: 0;
 }
 
+/* Deixa o botao de adicionar com uma cor quando mouse encima */
 .addBtn:hover {
   background-color: #bbb;
+}
+
+/* Quando eu clico em algum elemento da UL, ele "risca" como se tivesse concluído */
+.tarefa-concluida {
+    text-decoration:line-through;
 }
