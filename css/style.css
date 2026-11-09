@@ -80,3 +80,22 @@ input {
     text-decoration:line-through;
 }
 
+/* Estilo do botao remover */
+.remover{
+  padding: 3px;
+  width: 10%;
+  background: #c92c2c;
+  color: #fdfdfd;
+  float: right;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.remover:hover{
+  background-color: #fc0202;
+}
+
+
+

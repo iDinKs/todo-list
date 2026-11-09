@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS</title>
+    <title>To-do List</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js" defer></script>
 </head>
 <body>
 
-    <div id="minhaDiv" class="header">
-        <h2>Primeiro to-do list</h2>
-        <input type="text" id="meuInput" placeholder="Adicionar nova tarefa">
-        <span class="addBtn">Adicionar</span>
-    </div>
+<div id="minhaDiv" class="header">
+    <h2>Primeiro to-do list</h2>
 
-    <ul id="minhaUL">
-        <li>Acordar 5:00 para treinar</li>
-        <li>Leitura depois do treino</li>
-        <li>Estudar no trabalho se tiver tempo</li>
-        <li>Ler no horário de almoço</li>
-        <li>Cardio na esteira</li>
-        <li>Ler antes de dormir</li>
-    </ul>
+    <input type="text" id="meuInput" placeholder="Adicionar nova tarefa">
+    
+    <span onclick="newElement()" class="addBtn">Adicionar</span>
+</div>
+
+    <ul id="minhaUL"></ul>
 
 </body>
 </html>
