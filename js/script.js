@@ -1,3 +1,4 @@
+
 const tarefaConcluida = document.getElementById("minhaUL");
 
 tarefaConcluida.addEventListener("click", function(evento) {
@@ -5,3 +6,4 @@ tarefaConcluida.addEventListener("click", function(evento) {
         evento.target.classList.toggle("tarefa-concluida");
     }
 });
+
