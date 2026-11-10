@@ -44,7 +44,6 @@ function newElement() {
 
     li.appendChild(botaoRemover);
     document.getElementById("minhaUL").appendChild(li);
-    input.value = "";
 
     // Serve pra criar um checkbox juntamente quando um item da lista é adicionado
     const checkbox = document.createElement('input');
