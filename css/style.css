@@ -5,7 +5,7 @@
 
 /* Remova as margens e o espaçamento interno da lista */
 ul {
-  margin: 5;
+  margin: 0;
   padding: 0;
 }
 
@@ -13,7 +13,7 @@ ul {
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 15px 10px 15px 30px;
+  padding: 15px 10px 15px 50px;
   background: #ffffff;
   font-size: 18px;
   transition: 0.1s;
@@ -46,7 +46,7 @@ ul li:hover {
 }
 
 /* Aplique estilo à entrada */
-input {
+#meuInput {
   margin: 0;
   border: none;
   border-radius: 0;
@@ -56,13 +56,22 @@ input {
   font-size: 16px;
 }
 
+/* Checkbox no espaço à esquerda do item */
+ul li input[type="checkbox"] {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
 /* botao de adicionar */
 .addBtn {
   padding: 10px;
   width: 25%;
   background: #000000;
   color: #fdfdfd;
-  float: left;
+  float: right;
   text-align: center;
   font-size: 16px;
   cursor: pointer;

@@ -1,11 +1,22 @@
-// Quando eu clico em alguma tarefa ela vai riscar e ser marcada como "concluída"
+// Clicar na tarefa OU no checkbox risca o texto e sincroniza os dois
 const tarefaConcluida = document.getElementById("minhaUL");
 tarefaConcluida.addEventListener("click", function(evento) {
-    if (evento.target.tagName === "LI") {
-        evento.target.classList.toggle("tarefa-concluida");
+    const alvo = evento.target;
+
+    // Se clicou na tarefa (LI): inverte o checkbox e risca conforme ele ficou
+    if (alvo.tagName === "LI") {
+        const checkbox = alvo.querySelector("input");
+        checkbox.checked = !checkbox.checked;
+        alvo.classList.toggle("tarefa-concluida", checkbox.checked);
+    }
+
+    // Se clicou no checkbox (INPUT): risca ou desrisca o LI conforme o checkbox
+    if (alvo.tagName === "INPUT") {
+        alvo.parentElement.classList.toggle("tarefa-concluida", alvo.checked);
     }
 });
 
+// É aqui que ta sendo criado o LI dinâmico junto com o checkbox e o botao de delete
 function newElement() {
     // Pegamos o valor digitado no input
     let input = document.getElementById("meuInput");
@@ -40,7 +51,6 @@ function newElement() {
     checkbox.type = 'checkbox';
     li.append(checkbox);
 
-    
     // Limpamos o input
     input.value = "";
 }
